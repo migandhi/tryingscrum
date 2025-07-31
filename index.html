@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Scrum Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="board-container">
+        <div class="board-header">
+            <h1>Agile Scrum Board</h1>
+            <div class="board-controls">
+                <button id="addTask">Add Task</button>
+                <button id="exportBoard">Export Board</button>
+                <input type="file" id="importBoard" accept=".json" style="display: none;">
+                <button id="importBtn">Import Board</button>
+            </div>
+        </div>
+        <div class="board">
+            <div class="column" id="product-backlog" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <h2>Product Backlog</h2>
+                <div class="tasks"></div>
+            </div>
+            <div class="column" id="sprint-backlog" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <h2>Sprint Backlog</h2>
+                <div class="tasks"></div>
+            </div>
+            <div class="column" id="in-progress" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <h2>In Progress</h2>
+                <div class="tasks"></div>
+            </div>
+            <div class="column" id="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <h2>Done</h2>
+                <div class="tasks"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
